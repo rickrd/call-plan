@@ -4,13 +4,23 @@ import { connect } from 'react-redux'
 import Header from '../organisms/Header'
 import Body from '../organisms/Body'
 
+import styled from 'styled-components'
+
+const HomeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+`
+
 const Home = props => {
   console.log(props)
   return (
-    <div>
+    <HomeWrapper>
       <Header></Header>
       <Body></Body>
-    </div>
+    </HomeWrapper>
   )
 }
 
