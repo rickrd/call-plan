@@ -1,4 +1,4 @@
-import ADD_CALL from './actions'
+import { ADD_CALL } from './actions'
 
 const initialState = {
   calls: []
