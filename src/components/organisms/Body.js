@@ -15,7 +15,6 @@ const BodyWrapper = styled.div`
 const Body = () => {
   return (
     <BodyWrapper>
-      <h2>Calcule o valor da sua chamada com FaleMais:</h2>
       <CallForm></CallForm>
     </BodyWrapper>
   )

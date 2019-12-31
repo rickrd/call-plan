@@ -10,9 +10,7 @@ const HeaderWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #58167d;
   width: 100%;
-  padding: 20px 0;
 `
 
 const Header = () => {
