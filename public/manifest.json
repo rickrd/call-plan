@@ -21,6 +21,11 @@
       "src": "logo.png",
       "type": "image/png",
       "sizes": "30x30"
+    },
+    {
+      "src": "phone.png",
+      "type": "image/png",
+      "sizes": "256x256"
     }
   ],
   "start_url": ".",
