@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import CallForm from '../molecules/CallForm'
+import CallList from './CallList'
 
 const BodyWrapper = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ const Body = () => {
   return (
     <BodyWrapper>
       <CallForm></CallForm>
+      <CallList></CallList>
     </BodyWrapper>
   )
 }
