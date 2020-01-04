@@ -7,10 +7,14 @@ import Description from '../atoms/Description'
 
 const HeaderWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
+  border-bottom: 0.5px solid #fff;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 100px;
 `
 
 const Header = () => {
@@ -18,6 +22,7 @@ const Header = () => {
     <HeaderWrapper>
       <Logo></Logo>
       <Description></Description>
+      <div>Valores</div>
     </HeaderWrapper>
   )
 }

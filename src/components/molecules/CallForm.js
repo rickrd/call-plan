@@ -11,9 +11,11 @@ const CallFormWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #fff;
 
-  @media (min-width: 991px) {
-    flex-direction: row;
+  h2 {
+    font-size: 16px;
+    font-weight: 300;
   }
 
   form input,
@@ -34,29 +36,30 @@ const handleFormSubmit = (e, props) => {
 
   const { from, to, time, plan } = e.target
 
-  const checkFromAndToValue = prices.filter(price => {
+  const priceFound = prices.filter(price => {
     return price.from === from.value && price.to === to.value
   })
 
-  console.log(checkFromAndToValue)
-
-  if (checkFromAndToValue.length <= 0) {
+  if (priceFound.length <= 0) {
     alert('Insira um DDD válido')
     return null
   }
 
-  if (time.value <= plan.value) {
+  if (parseInt(time.value) <= parseInt(plan.value)) {
     withPlan = 0
   } else {
-    withPlan = plan.value - time.value
-    withPlan = withPlan * 1
+    withPlan = (parseInt(time.value) - parseInt(plan.value)) * parseFloat(priceFound[0].price)
   }
+
+  withoutPlan = parseInt(time.value) * parseFloat(priceFound[0].price)
 
   const call = {
     from: from.value,
     to: to.value,
     time: time.value,
-    plan: plan.value
+    plan: plan.value,
+    withPlan: withPlan,
+    withoutPlan: withoutPlan
   }
 
   props.dispatch(addCall(call))
@@ -67,6 +70,7 @@ const handleFormSubmit = (e, props) => {
 const CallForm = props => {
   return (
     <CallFormWrapper>
+      <h2>Calcule o valor da sua chamada:</h2>
       <form
         onSubmit={e => {
           handleFormSubmit(e, props)

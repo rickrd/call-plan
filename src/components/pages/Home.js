@@ -13,7 +13,7 @@ const HomeWrapper = styled.div`
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
   background-color: #58167d;
-  padding: 20px 0 100px 0;
+  padding-bottom: 100px;
 `
 
 const Home = props => {
