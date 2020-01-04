@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import Header from '../organisms/Header'
 import Body from '../organisms/Body'
+import Footer from '../organisms/Footer'
 
 import styled from 'styled-components'
 
@@ -13,7 +14,6 @@ const HomeWrapper = styled.div`
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
   background-color: #58167d;
-  padding-bottom: 100px;
 `
 
 const Home = props => {
@@ -22,6 +22,7 @@ const Home = props => {
     <HomeWrapper>
       <Header></Header>
       <Body></Body>
+      <Footer></Footer>
     </HomeWrapper>
   )
 }
