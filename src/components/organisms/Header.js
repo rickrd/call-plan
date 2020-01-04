@@ -13,7 +13,7 @@ const HeaderWrapper = styled.div`
   width: 100%;
   border-bottom: 0.5px solid #fff;
   color: #fff;
-  padding: 20px;
+  padding: 10px 0;
   margin-bottom: 100px;
 `
 
@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logo></Logo>
-      <Description></Description>
+      {/* <Description></Description> */}
       <div>Valores</div>
     </HeaderWrapper>
   )

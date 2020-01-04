@@ -20,7 +20,6 @@ const Logo = () => {
   return (
     <LogoWrapper>
       <img src="phone.png" width="64" height="64"></img>
-      <h1>FaleMais</h1>
     </LogoWrapper>
   )
 }

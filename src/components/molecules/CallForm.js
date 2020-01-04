@@ -46,12 +46,15 @@ const handleFormSubmit = (e, props) => {
   }
 
   if (parseInt(time.value) <= parseInt(plan.value)) {
-    withPlan = 0
+    withPlan = '0,00'
   } else {
-    withPlan = (parseInt(time.value) - parseInt(plan.value)) * parseFloat(priceFound[0].price)
+    withPlan = (
+      (parseInt(time.value) - parseInt(plan.value)) *
+      (parseFloat(priceFound[0].price) + parseFloat((priceFound[0].price / 100) * 10))
+    ).toFixed(2)
   }
 
-  withoutPlan = parseInt(time.value) * parseFloat(priceFound[0].price)
+  withoutPlan = (parseInt(time.value) * parseFloat(priceFound[0].price)).toFixed(2)
 
   const call = {
     from: from.value,
