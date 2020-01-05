@@ -9,7 +9,14 @@ import Home from './components/pages/Home'
 const store = createStore(reducers)
 
 const App = () => {
-  return <Provider store={store}><Home></Home></Provider>
+  store.subscribe(() => {
+    localStorage.setItem('calls', JSON.stringify(store.getState().calls))
+  })
+  return (
+    <Provider store={store}>
+      <Home></Home>
+    </Provider>
+  )
 }
 
 export default App

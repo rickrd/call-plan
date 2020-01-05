@@ -2,7 +2,7 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-import CallForm from '../molecules/CallForm'
+import CallForm from './CallForm'
 import CallList from './CallList'
 
 const BodyWrapper = styled.div`

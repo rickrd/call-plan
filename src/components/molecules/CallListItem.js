@@ -8,6 +8,9 @@ const CallListItemWrapper = styled.div`
   align-items: center;
   justify-content: center;
   color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  margin-bottom: 10px;
 
   @media (min-width: 991px) {
     flex-direction: row;
@@ -22,9 +25,9 @@ const CallListItem = props => {
   const { call } = props
   return (
     <CallListItemWrapper>
-      <div>Origem: {call.from}</div>
-      <div>Destino: {call.to}</div>
-      <div>Tempo: {call.time}</div>
+      <div>Origem: DDD {call.from}</div>
+      <div>Destino: DDD {call.to}</div>
+      <div>Tempo: {call.time} minutos</div>
       <div>Plano FaleMais: FaleMais {call.plan}</div>
       <div>Com FaleMais: R$ {call.withPlan.toString().replace('.', ',')}</div>
       <div>Sem FaleMais: R$ {call.withoutPlan.toString().replace('.', ',')}</div>

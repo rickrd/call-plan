@@ -14,8 +14,18 @@ const FooterWrapper = styled.div`
   color: #fff;
 `
 
+const FooterContent = styled.div`
+  width: 100%;
+  max-width: 1280px;
+  text-align: center;
+`
+
 const Footer = () => {
-  return <FooterWrapper>This is the footer</FooterWrapper>
+  return (
+    <FooterWrapper>
+      <FooterContent>FaleMais® Telzir. Todos os direitos reservados.</FooterContent>
+    </FooterWrapper>
+  )
 }
 
 export default Footer

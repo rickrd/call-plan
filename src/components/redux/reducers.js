@@ -1,7 +1,7 @@
 import { ADD_CALL } from './actions'
 
 const initialState = {
-  calls: [],
+  calls: localStorage.getItem('calls') ? JSON.parse(localStorage.getItem('calls')) : [],
   prices: [
     { from: '011', to: '016', price: '1.9' },
     { from: '016', to: '011', price: '2.9' },
