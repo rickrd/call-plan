@@ -7,8 +7,7 @@ const CallListItemWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #000;
-  background-color: #fff;
+  color: #fff;
 
   @media (min-width: 991px) {
     flex-direction: row;

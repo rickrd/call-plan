@@ -10,8 +10,7 @@ const DescriptionWrapper = styled.div`
 const Description = () => {
   return (
     <DescriptionWrapper>
-      Seja bem-vindo! Neste site você pode calcular valores referentes á chamadas feitas através do
-      plano FaleMais.
+      FaleMais
     </DescriptionWrapper>
   )
 }

@@ -29,7 +29,7 @@ const Header = () => {
     <HeaderWrapper>
       <HeaderContent>
         <Logo></Logo>
-        {/* <Description></Description> */}
+        <Description></Description>
         <HeaderMenu></HeaderMenu>
       </HeaderContent>
     </HeaderWrapper>
