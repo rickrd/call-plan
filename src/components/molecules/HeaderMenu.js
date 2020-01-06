@@ -18,8 +18,8 @@ const HeaderMenuWrapper = styled.div`
 const HeaderMenu = () => {
   return (
     <HeaderMenuWrapper>
-      <HeaderMenuItem title='Sobre'></HeaderMenuItem>
-      <HeaderMenuItem title='Valores'></HeaderMenuItem>
+      <HeaderMenuItem title='Sobre' path="/about"></HeaderMenuItem>
+      <HeaderMenuItem title='Valores' path="/prices"></HeaderMenuItem>
     </HeaderMenuWrapper>
   )
 }
