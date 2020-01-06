@@ -11,7 +11,7 @@ const HeaderWrapper = styled.div`
   border-bottom: 0.5px solid #fff;
   color: #fff;
   padding: 10px 0;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 `
 
 const HeaderContent = styled.div`

@@ -24,7 +24,8 @@ const CallFormWrapper = styled.div`
     }
 
     input,
-    select {
+    select,
+    button {
       margin-bottom: 10px;
     }
   }
@@ -62,6 +63,9 @@ const handleFormSubmit = (e, props) => {
 
   if (priceFound.length <= 0) {
     alert('Insira um DDD válido')
+    from.value = ''
+    to.value = ''
+    time.value = ''
     return null
   }
 
