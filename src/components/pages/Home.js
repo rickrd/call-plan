@@ -17,7 +17,6 @@ const HomeWrapper = styled.div`
 `
 
 const Home = props => {
-  console.log(props)
   return (
     <HomeWrapper>
       <Header></Header>
