@@ -18,10 +18,14 @@ const HeaderContent = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+
+  @media (min-width: 1280px) {
+    justify-content: space-between;
+  }
 `
 
 const Header = () => {

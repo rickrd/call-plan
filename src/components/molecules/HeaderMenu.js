@@ -13,6 +13,10 @@ const HeaderMenuWrapper = styled.div`
   @media (min-width: 1280px) {
     flex-direction: row;
   }
+  
+  a {
+    text-decoration: none;
+  }
 `
 
 const HeaderMenu = () => {
