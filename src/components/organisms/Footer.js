@@ -18,6 +18,7 @@ const FooterContent = styled.div`
   width: 100%;
   max-width: 1280px;
   text-align: center;
+  font-size: 12px;
 `
 
 const Footer = () => {

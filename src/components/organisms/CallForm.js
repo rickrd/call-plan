@@ -13,6 +13,22 @@ const CallFormWrapper = styled.div`
   justify-content: center;
   color: #fff;
 
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 1280px) {
+      flex-direction: row;
+    }
+
+    input,
+    select {
+      margin-bottom: 10px;
+    }
+  }
+
   h2 {
     font-size: 16px;
     font-weight: 300;
@@ -23,8 +39,12 @@ const CallFormWrapper = styled.div`
     margin-right: 10px;
   }
 
-  form button {
-    margin-left: 10px;
+  form button,
+  form select {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
   }
 `
 
@@ -68,6 +88,10 @@ const handleFormSubmit = (e, props) => {
   props.dispatch(addCall(call))
 
   console.log(call)
+
+  from.value = ''
+  to.value = ''
+  time.value = ''
 }
 
 const CallForm = props => {
@@ -79,9 +103,9 @@ const CallForm = props => {
           handleFormSubmit(e, props)
         }}
       >
-        <input id="from"></input>
-        <input id="to"></input>
-        <input id="time"></input>
+        <input id="from" placeholder="DDD origem"></input>
+        <input id="to" placeholder="DDD destino"></input>
+        <input id="time" placeholder="tempo (min.)"></input>
         <select id="plan">
           <option value="30">FaleMais 30</option>
           <option value="60">FaleMais 60</option>
